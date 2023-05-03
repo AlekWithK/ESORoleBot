@@ -6,3 +6,11 @@ todo.txt
 
 # Improc
 /dat/improc.py
+
+# pycache
+__pycache__/
+
+# Images
+.png
+.jpeg
+.jpg
