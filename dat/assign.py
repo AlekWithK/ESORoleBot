@@ -1,5 +1,5 @@
 import discord
-from dat.clear_dat import value_dict, trial_tags
+from dat.clear_dat import value_dict
 from dat.strings import *
 from dat.embeds import error_embed
 

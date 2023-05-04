@@ -3,20 +3,8 @@ RATIOS = [(0.2578125, 0.3056640625, 0.412109375, 0.5185546875, 0.6640625, 0.8779
           (0.808695652173913, 0.7333333333333333, 0.6579710144927536, 0.5826086956521739, 0.5072463768115942, 0.4318840579710145, 0.3565217391304348, 
            0.2811594202898551, 0.20579710144927535, 0.13043478260869565, 0.05507246376811594)]
 
-'''hierarchy = [
-    ('vrg_ex', 5), ('vrg_tri', 4), ('vrg_hm', 3), ('vrg_bahsei', 2), ('vrg_oax', 1), ('vrg', 0),
-    ('vdsr_ex', 5), ('vdsr_tri', 4), ('vdsr_hm', 3), ('vdsr_reef', 2), ('vdsr_twins', 1), ('vdsr', 0),
-    ('vka_ex', 5), ('vka_tri', 4), ('vka_hm', 3), ('vka_vrol', 2), ('vka_yandir', 1), ('vka', 0),
-    ('vss_ex', 4), ('vss_tri', 3), ('vss_hm', 2), ('vss_fire', 1), ('vss_ice', 1), ('vss', 0),
-    ('vcr_ex', 5), ('vcr_tri', 4), ('vcr_hm', 3), ('vcr_2', 2), ('vcr_1', 1), ('vcr', 0),
-    ('vas_ex', 4), ('vas_tri', 3), ('vas_hm', 2), ('vas_felms', 1), ('vas_llothis', 1), ('vas', 0),
-    ('vhof_ex', 3), ('vhof_tri', 2), ('vhof_hm', 1), ('vhof', 0),
-    ('vmol_ex', 2), ('vmol_hm', 1), ('vmol', 0),
-    ('vso_hm', 1), ('vso', 0),
-    ('vaa_hm', 1), ('vaa', 0),
-    ('vhrc_hm', 1), ('vhrc', 0),
-]'''
 
+trial_tags = ['vrg', 'vds', 'vka', 'vss', 'vcr', 'vas', 'vho', 'vmo', 'vso', 'vaa', 'vhr']
 
 clear_data = [
     # Regular vet clears
@@ -81,8 +69,6 @@ clear_data = [
     ('vmol_ex', RATIOS[0][5], RATIOS[1][7]),
 ]
 
-trial_tags = ['vrg', 'vds', 'vka', 'vss', 'vcr', 'vas', 'vho', 'vmo', 'vso', 'vaa', 'vhr']
-
 value_dict = {
     'vrg_ex': 5,
     'vrg_tri': 4,
@@ -135,3 +121,17 @@ value_dict = {
     'vhrc': 0
 }
 
+# UNUSED, but don't want to re-type it if I need it
+'''hierarchy = [
+    ('vrg_ex', 5), ('vrg_tri', 4), ('vrg_hm', 3), ('vrg_bahsei', 2), ('vrg_oax', 1), ('vrg', 0),
+    ('vdsr_ex', 5), ('vdsr_tri', 4), ('vdsr_hm', 3), ('vdsr_reef', 2), ('vdsr_twins', 1), ('vdsr', 0),
+    ('vka_ex', 5), ('vka_tri', 4), ('vka_hm', 3), ('vka_vrol', 2), ('vka_yandir', 1), ('vka', 0),
+    ('vss_ex', 4), ('vss_tri', 3), ('vss_hm', 2), ('vss_fire', 1), ('vss_ice', 1), ('vss', 0),
+    ('vcr_ex', 5), ('vcr_tri', 4), ('vcr_hm', 3), ('vcr_2', 2), ('vcr_1', 1), ('vcr', 0),
+    ('vas_ex', 4), ('vas_tri', 3), ('vas_hm', 2), ('vas_felms', 1), ('vas_llothis', 1), ('vas', 0),
+    ('vhof_ex', 3), ('vhof_tri', 2), ('vhof_hm', 1), ('vhof', 0),
+    ('vmol_ex', 2), ('vmol_hm', 1), ('vmol', 0),
+    ('vso_hm', 1), ('vso', 0),
+    ('vaa_hm', 1), ('vaa', 0),
+    ('vhrc_hm', 1), ('vhrc', 0),
+]'''
