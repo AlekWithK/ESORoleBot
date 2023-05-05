@@ -1,0 +1,4 @@
+-Add role removal for lower order roles
+-Improve error system and information
+-Increase stability (still scenarios not wrapped in T/E that can crash bot)
+-Fix double error report coming from NO_NEW_ROLES error in assign.py
