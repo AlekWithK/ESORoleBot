@@ -63,18 +63,18 @@ async def on_raw_reaction_add(payload):
         # Only if the reactor has role edit permissions (i.e. an officer)
         async with channel.typing(): 
             assigned_roles = []
-            if member.guild_permissions.manage_roles:            
+            if int(member.id) == int(os.getenv('DEV_USER_ID')):            
                 clears = await process(message.attachments, channel)            
                 assigned_roles, num_assign = await assign(coll, clears, guild, channel, author)        
             
-            if assigned_roles:
-                assigned_roles = ['**' + item + '**' for item in assigned_roles]    
-                assigned_roles = ', '.join(assigned_roles)        
-                await channel.send(embed=assigned_embed(assigned_roles, num_assign, author))
+                if assigned_roles:
+                    assigned_roles = ['**' + item + '**' for item in assigned_roles]    
+                    assigned_roles = ', '.join(assigned_roles)        
+                    await channel.send(embed=assigned_embed(assigned_roles, num_assign, author))
                 
-            else:
+            '''else:
                 error = ERROR_NO_NEW_ROLES + '**' + author.name + '**'
-                await channel.send(embed=error_embed(error))
+                await channel.send(embed=error_embed(error))'''
             
             # Debugging for now!    
             # Result.png is from improc.py
