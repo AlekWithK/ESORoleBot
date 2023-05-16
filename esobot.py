@@ -61,9 +61,10 @@ async def on_raw_reaction_add(payload):
         member = await guild.fetch_member(payload.user_id)
         
         # Only if the reactor has role edit permissions (i.e. an officer)
-        async with channel.typing(): 
-            assigned_roles = []
-            if int(member.id) == int(os.getenv('DEV_USER_ID')):            
+    
+        assigned_roles = []
+        if int(member.id) == int(os.getenv('DEV_USER_ID')):    
+            async with channel.typing():         
                 clears = await process(message.attachments, channel)            
                 assigned_roles, num_assign = await assign(coll, clears, guild, channel, author)        
             
